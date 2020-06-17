@@ -20,6 +20,11 @@ pipeline {
         }
       }
     }
+    stage('abc') {
+      steps {
+        zip(zipFile: 'sd', archive: true, dir: '/s')
+      }
+    }
   }
   post {
     always {
